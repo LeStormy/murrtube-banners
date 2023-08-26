@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Murrtube" %></title>
+    <title><%= "Submit a banner - Murrtube" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
     <meta property="og:site_name" content="Murrtube"/>
-    <meta property="og:title" content="<%= content_for?(:title) ? yield(:title) : "Murrtube" %>">
-    <meta property="og:description" content="<%= content_for?(:description) ? yield(:description) : "Murrtube, your one place for furry porn, murrsuit porn, pup porn, kinky porn... Just a whole bunch of fun porn :3" %>">
-    <meta property="og:image" content="<%= content_for?(:image_url) ? yield(:image_url) : asset_path('logo256.png') %>">
+    <meta property="og:title" content="Submit a banner - Murrtube">
+    <meta property="og:description" content="Murrtube, your one place for furry porn, murrsuit porn, pup porn, kinky porn... Just a whole bunch of fun porn :3">
+    <meta property="og:image" content="<%= asset_path('logo256.png') %>">
     <meta name="twitter:site" content="Murrtube" />
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="<%= content_for?(:title) ? yield(:title) : "Murrtube" %>">
-    <meta name="twitter:description" content="<%= content_for?(:description) ? yield(:description) : "Murrtube, your one place for furry porn, murrsuit porn, pup porn, kinky porn... Just a whole bunch of fun porn :3" %>">
-    <meta name="twitter:image" content="<%= content_for?(:image_url) ? yield(:image_url) : asset_path('logo256.png') %>">
+    <meta name="twitter:title" content="Submit a banner - Murrtube">
+    <meta name="twitter:description" content="Murrtube, your one place for furry porn, murrsuit porn, pup porn, kinky porn... Just a whole bunch of fun porn :3">
+    <meta name="twitter:image" content="<%= asset_path('logo256.png') %>">
 
     <link rel="icon" type="image/png" href=<%= asset_path('favicon-96x96.png') %> sizes="32x32">
     <link rel="apple-touch-icon" sizes="57x57" href=<%= asset_path('apple-icon-57x57.png') %>>
