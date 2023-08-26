@@ -1,0 +1,188 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= stub 'active_admin'
+ */
+
+@import "bulma";
+
+$dark-1: '#12121a';
+
+.hidden {
+  display: none
+}
+
+.flash-message {
+  position: fixed !important;
+  max-width: 30%;
+  right: 1rem;
+  z-index: 1000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rajdhani', sans-serif;  
+}
+
+h1 {
+  font-size: 3rem !important;
+}
+
+h2 {
+  font-size: 2.5rem !important;
+}
+
+h3 {
+  font-size: 2rem !important;
+}
+
+h4 {
+  font-size: 1.5rem !important;
+}
+
+h5 {
+  font-size: 1.25rem !important;
+}
+
+h6 {
+  font-size: 1rem !important;
+}
+
+.is-256x256 {
+  width: 256px;
+  height: 256px;
+}
+
+.is-256 {
+  width: 256px;
+}
+
+.is-512 {
+  @media screen and (min-width: 1280px) {
+    width: 60%;
+  }
+  @media screen and (max-width: 1280px) {
+    width: 90%;
+  }
+  border: 1px solid white;
+}
+
+.has-font-walter {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif !important;
+  background-color: #15151d;
+  min-height: 100vh
+}
+
+.has-text-lighter {
+  color: #cacaca !important;
+}
+
+.has-text-lighter-1 {
+  color: #a9a9a9 !important;
+}
+
+.has-text-lighter-2 {
+  color: #999999 !important;
+}
+
+.bottom-bordered-title {
+  border-bottom: 1px solid white;
+}
+
+.pagination {
+  gap: 0.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.has-white-space-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.has-text-link-light {
+  color: #619cff !important;
+}
+
+.has-white-space-pre-line {
+  white-space: pre-line;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.gap-4 {
+  gap: 4rem;
+}
+
+.box {
+  display:flex;
+  flex-direction: column;
+  background-color: #12121a !important;
+}
+
+.is-truncated-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+.image > img {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+}
+
+.navbar {
+  border: none !important;
+  border-bottom: 1px solid #363636 !important;
+  background-color: #12121a !important;
+}
+
+input[type=file][data-direct-upload-url][disabled] {
+  display: none;
+}
+
+.file {
+  display: block !important;
+}
+
+.file-cta {
+  background-color: #12121a !important;
+}
+
+.file-name {
+  min-width: 100%;
+}

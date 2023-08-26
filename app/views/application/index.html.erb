@@ -1,0 +1,54 @@
+<% content_for :title, "Submit a banner - Murrtube" %>
+<div class="columns">
+  <div class="column is-half-desktop is-offset-one-quarter-desktop is-two-thirds-tablet is-offset-2-tablet">
+    <div class="py-4">
+      <div class="columns is-vcentered">
+        <div class="column is-full-tablet is-9-desktop">
+          <h1 class="is-size-1 has-text-centered has-font-walter has-text-weight-bold">Submit a banner<br />for our socials</h1>
+        </div>
+        <div class="column is-full-tablet is-3-desktop">
+          <figure class="image mx-auto is-128x128">
+            <img src=<%= asset_path('android-icon-192x192.png') %> />
+          </figure>
+        </div>
+      </div>
+      <div class="box has-background-murrtube-dark is-shadowless">
+        <p class="pb-4 is-size-6">
+        Send us your banner image!<br />
+        It should be of size 1500x500 or more while keeping the same aspect ratio.
+        <br />
+        It should be suggestive but cannot be explicit, per social media banners terms of use.</p>
+        <%= form_for Submission.new do |form| %>
+          <div class="pt-4 field">
+            <div id="file-box" class="w-full file has-name is-boxed">
+              <label class="file-label">
+                <%= form.file_field :file, multiple: false, class: 'file-input', accept: 'image/*' %>
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    Choose a file…
+                  </span>
+                </span>
+                <span class="file-name" id="file-name">
+                  No file uploaded
+                </span>
+              </label>
+            </div>
+
+          </div>
+          <%= form.submit "Submit!", class: 'button is-link my-4 w-full' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('submission_file').addEventListener("change", () => {
+    const fileName = document.getElementById('file-name')
+    const fileField = document.getElementById('submission_file')
+    fileName.textContent = fileField.files[0].name
+  })
+</script>

@@ -1,0 +1,14 @@
+<nav class="navbar is-borderless is-shadowless" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to root_path, class: 'navbar-item' do %>
+      <img src=<%= asset_path('ms-icon-150x150.png') %> width="28" height="28">
+      <span class="navbar-item has-text-weight-bold has-font-walter">MURRTUBE</span>
+    <% end %>
+  </div>
+
+   <div class="navbar-end is-vcentered">
+      <%= link_to "https://murrtube.net", class: 'has-text-link-light has-text-weight-bold navbar-item' do %>
+        <i class="fas fa-arrow-right mr-2"></i>Go to Murrtube
+      <% end %>
+    </div>
+</nav>
