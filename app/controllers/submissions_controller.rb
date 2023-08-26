@@ -7,7 +7,6 @@ class SubmissionsController < ApplicationController
     submission.assign_attributes(submission_attributes)
 
     if submission.save
-      flash[:success] = "Got it, thanks for your submission!"
       redirect_to submitted_path
     else
       flash[:error] = "Something didn't work there"
